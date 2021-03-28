@@ -1,107 +1,72 @@
-$(function(){
-	var $write = $('#write'),
-		shift = false,
-		capslock = false;
-	
-	// The rest of the code goes here.
-});
-('#keyboard li').click(function(){
-	var $this = $(this),
-		character = $this.html(); // If it's a lowercase letter, nothing happens to this variable
-	
-	// Code for processing the key.
-});
-// Shift keys
-if ($this.hasClass('left-shift') || $this.hasClass('right-shift')) {
-	$('.letter').toggleClass('uppercase');
-	$('.symbol span').toggle();
-	
-	shift = (shift === true) ? false : true;
-	capslock = false;
-	return false;
+var ij = "";
+var varCapsLock = "0";
+var varShift = "0";
+function funcDel() {
+  var inputD = document.getElementById("backsp").innerHTML;
+  var i = document.getElementById("backsp").innerHTML.length;
+  var j = 1;
+  var k = i - j;
+  document.getElementById("backsp").innerHTML = inputD.slice(0, k);
 }
-// Caps lock
-if ($this.hasClass('capslock')) {
-	$('.letter').toggleClass('uppercase');
-	capslock = true;
-	return false;
+function functionCaps() {
+  if (varCapsLock == "0") {
+    varCapsLoc = "1";
+  } else if (varCapsLock == "1") {
+    varCapsLock = "0";
+  }
 }
-// Delete
-if ($this.hasClass('delete')) {
-	var html = $write.html();
-	
-	$write.html(html.substr(0, html.length - 1));
-	return false;
+function functionShf() {
+  if (varShif == "0") {
+    varShif = "1";
+  } else if (varShif == "1") {
+    varShif = "0";
+  }
 }
-// Special characters
-if ($this.hasClass('symbol')) character = $('span:visible', $this).html();
-if ($this.hasClass('space')) character = ' ';
-if ($this.hasClass('tab')) character = "\t";
-if ($this.hasClass('return')) character = "\n";
-// Uppercase letter
-if ($this.hasClass('uppercase')) character = character.toUpperCase();
-// Remove shift once a key is clicked.
-if (shift === true) {
-	$('.symbol span').toggle();
-	if (capslock === false) $('.letter').toggleClass('uppercase');
-	
-	shift = false;
+function functionEnt() {
+  var inputD = document.getElementById("ent").innerHTML;
+  document.getElementById("ent").innerHTML = inputD + "\n";
+}
+function functionOK() {
+  var inputD = document.getElementById("ok").innerHTML;
+  if (inputD == "") {
+    alert("Niste unijeli tekst!");
+  } else {
+    alert(inputD);
+  }
+}
+function functionSpc() {
+  var inputD = document.getElementById("space").innerHTML;
+  document.getElementById("space").innerHTML = inputD + " ";
 }
 
-// Add the character
-$write.html($write.html() + character);
-$(function(){
-	var $write = $('#write'),
-		shift = false,
-		capslock = false;
-	
-	$('#keyboard li').click(function(){
-		var $this = $(this),
-			character = $this.html(); // If it's a lowercase letter, nothing happens to this variable
-		
-		// Shift keys
-		if ($this.hasClass('left-shift') || $this.hasClass('right-shift')) {
-			$('.letter').toggleClass('uppercase');
-			$('.symbol span').toggle();
-			
-			shift = (shift === true) ? false : true;
-			capslock = false;
-			return false;
-		}
-		
-		// Caps lock
-		if ($this.hasClass('capslock')) {
-			$('.letter').toggleClass('uppercase');
-			capslock = true;
-			return false;
-		}
-		
-		// Delete
-		if ($this.hasClass('delete')) {
-			var html = $write.html();
-			
-			$write.html(html.substr(0, html.length - 1));
-			return false;
-		}
-		
-		// Special characters
-		if ($this.hasClass('symbol')) character = $('span:visible', $this).html();
-		if ($this.hasClass('space')) character = ' ';
-		if ($this.hasClass('tab')) character = "\t";
-		if ($this.hasClass('return')) character = "\n";
-		
-		// Uppercase letter
-		if ($this.hasClass('uppercase')) character = character.toUpperCase();
-		
-		// Remove shift once a key is clicked.
-		if (shift === true) {
-			$('.symbol span').toggle();
-			if (capslock === false) $('.letter').toggleClass('uppercase');
-			
-			shift = false;
-		}
-		
-		// Add the character
-		$write.html($write.html() + character);
-	});
-});
+
+//Brojevi
+function function1() {
+  var inputD = document.getElementById("1").innerHTML;
+  document.getElementById("1").innerHTML = inputD + "1";
+}
+
+function functionQ() {
+  var inputD = document.getElementById("q").innerHTML;
+  if (varCapsLoc == "0") {
+    if (varShif == "0") {
+      document.getElementById("q").innerHTML = inputD + "q";
+    } else if (varShif == "1") {
+      varShif = "0";
+      document.getElementById("q").innerHTML = inputD + "Q";
+    }
+  } else if (varCapsLoc == "1") {
+    if (varShif == "0") {
+      document.getElementById("q").innerHTML = inputD + "Q";
+    } else if (varShif == "1") {
+      varShif = "0";
+      document.getElementById("q").innerHTML = inputD + "q";
+    }
+  }
+}
+
+
+
+
+
+

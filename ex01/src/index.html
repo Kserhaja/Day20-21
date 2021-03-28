@@ -1,74 +1,82 @@
 <!DOCTYPE html>
-<html  xml:lang="en" lang="en">
+<html> 
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-     
-    <title>QWERTY KEYBOARD</title>
-    <link rel="stylesheet" type="keyboard" href="css/index.css" />
+<title>Virtual Keyboard</title></h2>
+
+    <link rel="stylesheet" href="/ex01/src/index.css">
 </head>
 <body>
+<h1>Virtual Keyboard</h1>
+<div class= "textarea">
+    
+</div>
+<textarea id="write" rows="15" cols="60"></textarea>
+
+
+<div class="buttons">
+    
+    <div class="buttons">
+        <div class="row-one">
+        <button onclick="func1()" id="1" class="keyN">1</button>
+        <button onclick="func2()" id="2" class="keyN">2</button>
+        <button onclick="func3()" id="3" class="keyN">3</button>
+        <button onclick="func4()" id="4" class="keyN">4</button>
+        <button onclick="func5()" id="5" class="keyN">5</button>
+        <button onclick="func6()" id="6" class="keyN">6</button>
+        <button onclick="func7()" id="7" class="keyN">7</button>
+        <button onclick="func8()" id="8" class="keyN">8</button>
+        <button onclick="func9()" id="9" class="keyN">9</button>
+        <button onclick="func0()" id="0" class="keyN">0</button>
+        <button onclick="funcDel()" id="backsp" class="backspace">Backspace</button>
+    </div>  
+
+ <div class="row-two">
+            <button onclick="funcQ()" id="q" class="key" value="q">q</button>
+            <button onclick="funcW()" id="w" class="key" value="w">w</button>
+            <button onclick="funcE()" id="e" class="key" value="e">e</button>
+            <button onclick="funcR()" id="r" class="key" value="r">r</button>
+            <button onclick="funcT()" id="t" class="key" value="t">t</button>
+            <button onclick="funcY()" id="y" class="key" value="y">y</button>
+            <button onclick="funcU()" id="u" class="key" value="u">u</button>
+            <button onclick="funcI()" id="i" class="key" value="i">i</button>
+            <button onclick="funcP()" id="p" class="key" value="p">p</button>
+            <button onclick="funcEnter()" id="ent" class="enter">Enter</button>
+            
+        </div> 
+<div class="row-three">
+            <button onclick="funcA()" id="a" class="key" value="a">a</button>
+            <button onclick="funcS()" id="s" class="key" value="s">s</s></button>
+            <button onclick="funcD()" id="d" class="key" value="d">d</button>
+            <button onclick="funcF()" id="f" class="key" value="f">f</button>
+            <button onclick="funcG()" id="g" class="key" value="g">g</button>
+            <button onclick="funcH()" id="h" class="key" value="h">h</button>
+            <button onclick="funcJ()" id="j" class="key" value="j">j</button>
+            <button onclick="funcK()" id="k" class="key" value="k">k</button>
+            <button onclick="funcL()" id="l" class="key" value="l">l</button>
+            <button onclick="funcCL()" id="capsLock" class="caps-lock">Caps Lock</button>
+            </div>
+ <div class="row-four">
+                <button onclick="funcZ()" id="z" class="key" value="z">z</button>
+                <button onclick="funcX()" id="x" class="key" value="x">x</button>
+                <button onclick="funcC()" id="c" class="key" value="c">c</button>
+                <button onclick="funcV()" id="v" class="key" value="v">v</button>
+                <button onclick="funcB()" id="b" class="key" value="b">b</button>
+                <button onclick="funcN()" id="n" class="key" value="n">n</button>
+                <button onclick="funcM()" id="m" class="key" value="m">m</button>
+                <button onclick="funcDash()" id="-" class="key" value="-">-</button>
+                <button onclick="funcLodash()" id="_" class="key" value="_">_</button>
+                <button onclick="funcSh()" id="shift" class="shift">Shift</button>
+             </div>
+             <div class="row-five">
+                
+                <button onclick="funcSp()" id="space" class="key" value="space">Space</button>
+                <button onclick="funcOk()" id="ok" class="ok">OK</button>
+             </div>
+               
  
-<div id="container">
-    <textarea id="write" rows="6" cols="60"></textarea>
-    <ul id="keyboard">
-        <li class="symbol"><span class="off">`</span><span class="on">~</span></li>
-        <li class="symbol"><span class="off">1</span><span class="on">!</span></li>
-        <li class="symbol"><span class="off">2</span><span class="on">@</span></li>
-        <li class="symbol"><span class="off">3</span><span class="on">#</span></li>
-        <li class="symbol"><span class="off">4</span><span class="on">$</span></li>
-        <li class="symbol"><span class="off">5</span><span class="on">%</span></li>
-        <li class="symbol"><span class="off">6</span><span class="on">^</span></li>
-        <li class="symbol"><span class="off">7</span><span class="on">&amp;</span></li>
-        <li class="symbol"><span class="off">8</span><span class="on">*</span></li>
-        <li class="symbol"><span class="off">9</span><span class="on">(</span></li>
-        <li class="symbol"><span class="off">0</span><span class="on">)</span></li>
-        <li class="symbol"><span class="off">-</span><span class="on">_</span></li>
-        <li class="symbol"><span class="off">=</span><span class="on">+</span></li>
-        <li class="delete lastitem">delete</li>
-        <li class="tab">tab</li>
-        <li class="letter">q</li>
-        <li class="letter">w</li>
-        <li class="letter">e</li>
-        <li class="letter">r</li>
-        <li class="letter">t</li>
-        <li class="letter">y</li>
-        <li class="letter">u</li>
-        <li class="letter">i</li>
-        <li class="letter">o</li>
-        <li class="letter">p</li>
-        <li class="symbol"><span class="off">[</span><span class="on">{</span></li>
-        <li class="symbol"><span class="off">]</span><span class="on">}</span></li>
-        <li class="symbol lastitem"><span class="off">\</span><span class="on">|</span></li>
-        <li class="capslock">caps lock</li>
-        <li class="letter">a</li>
-        <li class="letter">s</li>
-        <li class="letter">d</li>
-        <li class="letter">f</li>
-        <li class="letter">g</li>
-        <li class="letter">h</li>
-        <li class="letter">j</li>
-        <li class="letter">k</li>
-        <li class="letter">l</li>
-        <li class="symbol"><span class="off">;</span><span class="on">:</span></li>
-        <li class="symbol"><span class="off">'</span><span class="on">&quot;</span></li>
-        <li class="return lastitem">return</li>
-        <li class="left-shift">shift</li>
-        <li class="letter">z</li>
-        <li class="letter">x</li>
-        <li class="letter">c</li>
-        <li class="letter">v</li>
-        <li class="letter">b</li>
-        <li class="letter">n</li>
-        <li class="letter">m</li>
-        <li class="symbol"><span class="off">,</span><span class="on">&lt;</span></li>
-        <li class="symbol"><span class="off">.</span><span class="on">&gt;</span></li>
-        <li class="symbol"><span class="off">/</span><span class="on">?</span></li>
-        <li class="right-shift lastitem">shift</li>
-        <li class="space lastitem">&nbsp;</li>
-    </ul>
 </div>
  
-<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
-<script type="text/javascript" src="js/keyboard.js"></script>
+<script type="text/javascript" src="/ex01/src/index.js"></script>
+<script type="text/javascript" src="/ex01/src/index.js"></script>
 </body>
 </html>
