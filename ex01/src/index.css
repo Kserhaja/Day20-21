@@ -1,10 +1,12 @@
 
 * {
-    margin:-5;
+    margin: 0px;
     border-inline-color: black ;
     box-sizing: border-box;
-  
-}
+
+
+} 
+
 h1 {
     text-align: center;
 }
@@ -15,7 +17,7 @@ h1 {
     width: 100%;
     top: 20%;
     background-color: white;
-
+    
 }
 textarea {
     position:relative;
@@ -32,6 +34,7 @@ textarea {
     bottom: 10%;
     width: 100%;
     top: 20%;
+    
 }
 .row-two {
     position:relative;
@@ -61,4 +64,7 @@ textarea {
     bottom: 10%;
     width: 100%;
     top: 20%;
+}
+.funSp {
+
 }
